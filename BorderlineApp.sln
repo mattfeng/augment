@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderlineApp", "Assembly-CSharp.csproj", "{C8B520BE-8AC3-8117-BA5B-205655CADD61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderlineApp", "Assembly-CSharp-Editor.csproj", "{F9362A91-CBC2-6C7C-0F26-CD9A2A21D70A}"
@@ -22,8 +22,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

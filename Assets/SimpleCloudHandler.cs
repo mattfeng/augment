@@ -40,6 +40,12 @@ public class SimpleCloudHandler: MonoBehaviour, ICloudRecoEventHandler {
 	public void OnNewSearchResult(TargetFinder.TargetSearchResult targetSearchResult) {
 		// do something with the target metadata
 		mTargetMetadata = targetSearchResult.MetaData;
+		Debug.Log(targetSearchResult.TargetName);
+		Debug.Log(mTargetMetadata);
+
+		GameObject rawImg = GameObject.Find("ARVideoPlayer");
+		StartCoroutine(rawImg.GetComponent<StreamVideo>().playVideo());
+
 		// stop scanning the cloud
 		mCloudRecoBehaviour.CloudRecoEnabled = false;
 	}
