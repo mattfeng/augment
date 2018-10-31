@@ -21,7 +21,6 @@ public class StreamVideo : MonoBehaviour
 	{
 		//Add VideoPlayer to the GameObject
         videoPlayer = gameObject.AddComponent<VideoPlayer>();
-        canvas.
 		 
 		//Disable Play on Awake for both Video and Audio
 		videoPlayer.playOnAwake = false;
