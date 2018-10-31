@@ -10,3 +10,6 @@ ImageTarget you wish to make from it; in order to instantiate, use the following
 ```csharp
     GameObject newImageTarget = Instantiate(ImageTargetTemplate.gameObject) as GameObject;
 ```
+
+### Video Playback isn't working
+Try restarting Unity.
