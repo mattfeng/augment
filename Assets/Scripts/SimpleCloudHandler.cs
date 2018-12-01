@@ -45,10 +45,6 @@ public class SimpleCloudHandler: MonoBehaviour, ICloudRecoEventHandler {
         Debug.Log(targetSearchResult.TargetName);
         Debug.Log(mTargetMetadata);
 
-        // GameObject rawImg = GameObject.Find("ARVideoPlayer");
-        // StartCoroutine(rawImg.GetComponent<StreamVideo>().playVideo());
-
-
         if (ImageTargetTemplate) {
             GameObject newImageTarget = Instantiate(ImageTargetTemplate.gameObject) as GameObject;
             // Change the video URL based on the recognized object
@@ -58,26 +54,23 @@ public class SimpleCloudHandler: MonoBehaviour, ICloudRecoEventHandler {
             ImageTargetBehaviour imageTargetBehaviour = 
                 (ImageTargetBehaviour) tracker.TargetFinder.EnableTracking(targetSearchResult, newImageTarget);
         }
-
-        // stop scanning the cloud
-        // mCloudRecoBehaviour.CloudRecoEnabled = false;
     }
 
     void OnGUI() {
-        // Display current 'scanning' status
-        GUI.Box(new Rect(100, 100, 200, 50), mIsScanning ? "Scanning" : "Not scanning");
-        // Display metadata of latest detected cloud-target
-        GUI.Box(new Rect(100, 200, 200, 50), "Metadata: " + mTargetMetadata);
+        //// Display current 'scanning' status
+        //GUI.Box(new Rect(100, 100, 200, 50), mIsScanning ? "Scanning" : "Not scanning");
+        //// Display metadata of latest detected cloud-target
+        //GUI.Box(new Rect(100, 200, 200, 50), "Metadata: " + mTargetMetadata);
 
-        // if not scanning, show button
-        // so that user can restart cloud scanning
-        if (!mIsScanning) {
-            if (GUI.Button(new Rect(100, 300, 200, 50), "Restart Scanning")) {
-                // restart TargetFinder
-                if (mCloudRecoBehaviour.CloudRecoInitialized && !mCloudRecoBehaviour.CloudRecoEnabled) {
-                    mCloudRecoBehaviour.CloudRecoEnabled = true;
-                }
-            }
-        }
+        //// if not scanning, show button
+        //// so that user can restart cloud scanning
+        //if (!mIsScanning) {
+        //    if (GUI.Button(new Rect(100, 300, 200, 50), "Restart Scanning")) {
+        //        // restart TargetFinder
+        //        if (mCloudRecoBehaviour.CloudRecoInitialized && !mCloudRecoBehaviour.CloudRecoEnabled) {
+        //            mCloudRecoBehaviour.CloudRecoEnabled = true;
+        //        }
+        //    }
+        //}
     }
 }
